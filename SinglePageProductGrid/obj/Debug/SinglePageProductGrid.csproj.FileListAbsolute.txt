@@ -1,0 +1,10 @@
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\bin\Debug\SinglePageProductGrid.exe.config
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\bin\Debug\SinglePageProductGrid.exe
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\bin\Debug\SinglePageProductGrid.pdb
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\obj\Debug\SinglePageProductGrid.csprojAssemblyReference.cache
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\obj\Debug\SinglePageProductGrid.ProductGrid.resources
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\obj\Debug\SinglePageProductGrid.Properties.Resources.resources
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\obj\Debug\SinglePageProductGrid.csproj.GenerateResource.cache
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\obj\Debug\SinglePageProductGrid.csproj.CoreCompileInputs.cache
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\obj\Debug\SinglePageProductGrid.exe
+D:\Allmoxy\SinglePageProductGrid\SinglePageProductGrid\obj\Debug\SinglePageProductGrid.pdb
