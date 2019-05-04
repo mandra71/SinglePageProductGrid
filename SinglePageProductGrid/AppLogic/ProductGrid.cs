@@ -24,7 +24,7 @@ namespace SinglePageProductGrid
 
         private void addProduct_Click(object sender, EventArgs e)
         {
-
+            quantity.SelectedIndex = 0;
         }
         /// <summary>
         /// Refrenced at
@@ -64,6 +64,11 @@ namespace SinglePageProductGrid
                 DataGridViewSelectionMode.FullRowSelect;
             productsGrid.MultiSelect = false;
             productsGrid.Dock = DockStyle.Fill;
+        }
+
+        private void productComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
