@@ -1,13 +1,9 @@
-﻿using SinglePageProductGrid.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using SinglePageProductGrid.Models;
 
 //Steamer Bar Cabinet
 //https://www.crateandbarrel.com/steamer-bar-cabinet/s233296?localedetail=US&a=1552&campaignid=853779501&adgroupid=46164021347&targetid=pla-301450237335&pla_sku=233296&pcat=FURN&ag=adult&scid=scplp233296&sc_intid=233296&gclid=CjwKCAjwza_mBRBTEiwASDWVvsFdWM1qWCXpAy2NTB8_vmXY9IEHscRKRbrcGEKpFSxsjXEyd3RtQBoCkvoQAvD_BwE&gclsrc=aw.ds
@@ -29,12 +25,21 @@ namespace SinglePageProductGrid
 
         public ProductGrid()
         {
-            //SetupDataGridView();
             InitializeComponent();
+            SetupDataGridView();
+            createProducts();
+
+            image.Image = Properties.Resources.Seatcraft;
         }
 
         private void addProduct_Click(object sender, EventArgs e)
         {
+            Product insert = products[productComboBox1.SelectedIndex];
+            insert.Quantity = quantity.SelectedIndex;
+
+            if(insert.Quantity > 0)
+                productsGrid.Rows.Add(insert.Title, insert.Description, string.Format("{0:C2}", insert.Price * insert.Quantity), insert.Quantity);
+
             quantity.SelectedIndex = 0;
         }
         /// <summary>
@@ -52,9 +57,7 @@ namespace SinglePageProductGrid
             productsGrid.ColumnHeadersDefaultCellStyle.Font =
                 new Font(productsGrid.Font, FontStyle.Bold);
 
-            productsGrid.Name = "songsDataGridView";
-            productsGrid.Location = new Point(8, 8);
-            productsGrid.Size = new Size(500, 250);
+            productsGrid.Name = "productGridView";
             productsGrid.AutoSizeRowsMode =
                 DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             productsGrid.ColumnHeadersBorderStyle =
@@ -63,23 +66,82 @@ namespace SinglePageProductGrid
             productsGrid.GridColor = Color.Black;
             productsGrid.RowHeadersVisible = false;
 
-            productsGrid.Columns[0].Name = "Release Date";
-            productsGrid.Columns[1].Name = "Track";
-            productsGrid.Columns[2].Name = "Title";
-            productsGrid.Columns[3].Name = "Artist";
-            productsGrid.Columns[4].Name = "Album";
-            productsGrid.Columns[4].DefaultCellStyle.Font =
-                new Font(productsGrid.DefaultCellStyle.Font, FontStyle.Italic);
+
+            productsGrid.Columns[2].DefaultCellStyle.Font =
+                new Font(productsGrid.DefaultCellStyle.Font, FontStyle.Bold);
 
             productsGrid.SelectionMode =
                 DataGridViewSelectionMode.FullRowSelect;
             productsGrid.MultiSelect = false;
-            productsGrid.Dock = DockStyle.Fill;
         }
 
         private void productComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Product selected = products[productComboBox1.SelectedIndex];
+            title.Text = selected.Title;
+            price.Text = string.Format("{0:C2}", selected.Price);
+            description.Text = selected.Description;
+            switch (productComboBox1.SelectedIndex)
+            {
+                case 0:
+                    image.Image = Properties.Resources.Seatcraft;
+                    break;
+                case 1:
+                    image.Image = Properties.Resources.LenaLoveseat;
+                    break;
+                case 2:
+                    image.Image = Properties.Resources.Parker;
+                    break;
+                case 3:
+                    image.Image = Properties.Resources.SteamerBarCabinet;
+                    break;
+                case 4:
+                    image.Image = Properties.Resources.HenjesCoffeeTable;
+                    break;
+            }
+        }
 
+        private void createProducts()
+        {
+            Product next = new Product();
+            next.Title = "Seatcraft Home Theater loveseat";
+            next.Description = "A chair worthy of its own audience, we welcome you to enjoy one of our most luxurious sectionals ever, built with one of our most exceptional leathers.";
+            next.Price = 1799.00;
+            next.Quantity = 0;
+
+            products.Add(0, next);
+
+            next = new Product();
+            next.Title = "Lena Loveseat";
+            next.Description = "Add a touch of modern flair to your home decor with this two-tone leather loveseat. This loveseat offers a gorgeous bonded leather upholstery, with a hardwood frame and chrome-finished metal legs.";
+            next.Price = 479.99;
+            next.Quantity = 0;
+
+            products.Add(1, next);
+
+            next = new Product();
+            next.Title = "Parker Recliner";
+            next.Description = "Get cozy on this recliner that is the ultimate in lounging! A tan hue and super comfy construction make it perfect for catching up on your favorite TV series or watching a movie with some popcorn! Featuring a padded chaise and a cupholder, this relaxing chair is ideal for the living room, family room or den.";
+            next.Price = 399.99;
+            next.Quantity = 0;
+
+            products.Add(2, next);
+
+            next = new Product();
+            next.Title = "Steamer Bar Cabinet";
+            next.Description = "Inspired by a vintage steamer trunk, our updated bar cabinet opens to reveal a full-service home bar. Finished back and concealed casters allow this handsome unit to float or swivel in a room; separate serving tray is removable for passing drinks.";
+            next.Price = 1399.00;
+            next.Quantity = 0;
+
+            products.Add(3, next);
+
+            next = new Product();
+            next.Title = "Henjes Coffee Table";
+            next.Description = "The coffee's table's simple and sophisticated crate design is undeniable and completely unique. From clean slatted lines along the tabletop to the airy open shelves along the base, this piece ensures an easy fit into any home style.";
+            next.Price = 206.99;
+            next.Quantity = 0;
+
+            products.Add(4, next);
         }
     }
 }

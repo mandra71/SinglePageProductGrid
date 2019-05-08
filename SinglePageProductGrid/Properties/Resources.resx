@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ParkerTopHandleRecliner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ParkerTopHandleRecliner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HenjesCoffeeTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HenjesCoffeeTable.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SeatcraftHomeTheaterLoveseat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SeatcraftHomeTheaterLoveseat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LenaLoveseat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LenaLoveseat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Seatcraft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seatcraft.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SteamerBarCabinet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SteamerBarCabinet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

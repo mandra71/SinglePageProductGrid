@@ -29,30 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductGrid));
-            this.productsGrid = new System.Windows.Forms.DataGridView();
             this.addProduct = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.productComboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.description = new System.Windows.Forms.TextBox();
             this.title = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.price = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.quantity = new System.Windows.Forms.ComboBox();
+            this.productsGrid = new System.Windows.Forms.DataGridView();
+            this.image = new System.Windows.Forms.PictureBox();
+            this.titleGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.productsGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productsGrid
-            // 
-            this.productsGrid.AllowUserToOrderColumns = true;
-            this.productsGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.productsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsGrid.GridColor = System.Drawing.SystemColors.Highlight;
-            this.productsGrid.Location = new System.Drawing.Point(396, 12);
-            this.productsGrid.Name = "productsGrid";
-            this.productsGrid.Size = new System.Drawing.Size(664, 443);
-            this.productsGrid.TabIndex = 3;
             // 
             // addProduct
             // 
@@ -63,18 +56,6 @@
             this.addProduct.Text = "Add Product";
             this.addProduct.UseVisualStyleBackColor = true;
             this.addProduct.Click += new System.EventHandler(this.addProduct_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.ImageLocation = "D:\\Allmoxy\\SinglePageProductGrid\\SinglePageProductGrid\\Resources\\Webp.net-resizei" +
-    "mage.jpg";
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 239);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // productComboBox1
             // 
@@ -102,15 +83,17 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Product Description";
             // 
-            // textBox1
+            // description
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 374);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(364, 81);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TabStop = false;
+            this.description.Location = new System.Drawing.Point(13, 374);
+            this.description.Multiline = true;
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            this.description.Size = new System.Drawing.Size(364, 81);
+            this.description.TabIndex = 3;
+            this.description.TabStop = false;
+            this.description.Text = "A chair worthy of its own audience, we welcome you to enjoy one of our most luxur" +
+    "ious sectionals ever, built with one of our most exceptional leathers.";
             // 
             // title
             // 
@@ -122,16 +105,16 @@
             this.title.TabIndex = 6;
             this.title.Text = "Seatcraft Home Theater Loveseat";
             // 
-            // label2
+            // price
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(12, 281);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "$";
+            this.price.AutoSize = true;
+            this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.price.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.price.Location = new System.Drawing.Point(12, 281);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(85, 24);
+            this.price.TabIndex = 7;
+            this.price.Text = "$1799.00";
             // 
             // label3
             // 
@@ -165,45 +148,105 @@
             this.quantity.TabIndex = 9;
             this.quantity.Text = "0";
             // 
+            // productsGrid
+            // 
+            this.productsGrid.AllowUserToAddRows = false;
+            this.productsGrid.AllowUserToOrderColumns = true;
+            this.productsGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.productsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.titleGrid,
+            this.quantityGrid,
+            this.priceGrid,
+            this.descriptionGrid});
+            this.productsGrid.GridColor = System.Drawing.SystemColors.Highlight;
+            this.productsGrid.Location = new System.Drawing.Point(396, 12);
+            this.productsGrid.Name = "productsGrid";
+            this.productsGrid.Size = new System.Drawing.Size(664, 443);
+            this.productsGrid.TabIndex = 3;
+            // 
+            // image
+            // 
+            this.image.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.image.ImageLocation = "";
+            this.image.InitialImage = ((System.Drawing.Image)(resources.GetObject("image.InitialImage")));
+            this.image.Location = new System.Drawing.Point(12, 39);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(365, 239);
+            this.image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.image.TabIndex = 2;
+            this.image.TabStop = false;
+            // 
+            // titleGrid
+            // 
+            this.titleGrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.titleGrid.HeaderText = "Title";
+            this.titleGrid.Name = "titleGrid";
+            this.titleGrid.ReadOnly = true;
+            // 
+            // quantityGrid
+            // 
+            this.quantityGrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantityGrid.HeaderText = "Quantity";
+            this.quantityGrid.Name = "quantityGrid";
+            this.quantityGrid.ReadOnly = true;
+            // 
+            // priceGrid
+            // 
+            this.priceGrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.priceGrid.HeaderText = "Price";
+            this.priceGrid.Name = "priceGrid";
+            this.priceGrid.ReadOnly = true;
+            // 
+            // descriptionGrid
+            // 
+            this.descriptionGrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descriptionGrid.HeaderText = "Description";
+            this.descriptionGrid.Name = "descriptionGrid";
+            this.descriptionGrid.ReadOnly = true;
+            // 
             // ProductGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1072, 467);
+            this.Controls.Add(this.productsGrid);
             this.Controls.Add(this.quantity);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.price);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.productComboBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.image);
             this.Controls.Add(this.addProduct);
-            this.Controls.Add(this.productsGrid);
             this.MaximumSize = new System.Drawing.Size(1088, 506);
             this.MinimumSize = new System.Drawing.Size(1088, 506);
             this.Name = "ProductGrid";
             this.Text = "Product Grid";
             ((System.ComponentModel.ISupportInitialize)(this.productsGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView productsGrid;
         private System.Windows.Forms.Button addProduct;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox image;
         private System.Windows.Forms.ComboBox productComboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox description;
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label price;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox quantity;
+        private System.Windows.Forms.DataGridView productsGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionGrid;
     }
 }
 

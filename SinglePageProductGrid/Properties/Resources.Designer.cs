@@ -63,9 +63,9 @@ namespace SinglePageProductGrid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ParkerTopHandleRecliner {
+        internal static System.Drawing.Bitmap HenjesCoffeeTable {
             get {
-                object obj = ResourceManager.GetObject("ParkerTopHandleRecliner", resourceCulture);
+                object obj = ResourceManager.GetObject("HenjesCoffeeTable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,29 @@ namespace SinglePageProductGrid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SeatcraftHomeTheaterLoveseat {
+        internal static System.Drawing.Bitmap LenaLoveseat {
             get {
-                object obj = ResourceManager.GetObject("SeatcraftHomeTheaterLoveseat", resourceCulture);
+                object obj = ResourceManager.GetObject("LenaLoveseat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Parker {
+            get {
+                object obj = ResourceManager.GetObject("Parker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Seatcraft {
+            get {
+                object obj = ResourceManager.GetObject("Seatcraft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

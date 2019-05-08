@@ -8,10 +8,9 @@ namespace SinglePageProductGrid.Models
 {
     class Product
     {
-       protected string Title { get; set; }
-       protected string Description { get; set; }
-       protected int Price { get; set; }
-       protected int Quantity { get; set; }
-       protected string ImageLocation { get; set; }
+       public string Title { get; set; }
+       public string Description { get; set; }
+       public double Price { get; set; }
+       public int Quantity { get; set; }
     }
 }

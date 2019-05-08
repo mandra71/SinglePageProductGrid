@@ -87,9 +87,9 @@
   <ItemGroup>
     <Content Include="Resources\HenjesCoffeeTable.jpg" />
     <Content Include="Resources\LenaLoveseat.jpg" />
-    <Content Include="Resources\ParkerTopHandleRecliner.jpg" />
-    <Content Include="Resources\SeatcraftHomeTheaterLoveseat.jpg" />
+    <Content Include="Resources\Parker.jpg" />
     <Content Include="Resources\SteamerBarCabinet.jpg" />
+    <Content Include="Resources\Seatcraft.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
